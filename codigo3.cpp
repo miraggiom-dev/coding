@@ -5,10 +5,13 @@ using namespace std;
 int main() {
 
     bool SYS = true;
-    string tecla, N, S;
-    string nombre, estudiante_mayor_nota, estudiante_menor_nota, estudiante_mayor_edad, estudiante_menor_edad, estudiante_mayor_cantidad_notas, estudiante_menor_cantidad_notas;
-    int cantidad_estudiantes, dia, mes, ano, dia_actual, mes_actual, ano_actual, edad, dia_mayor_edad, dia_menor_edad, mes_mayor_edad, mes_menor_edad;
-    int mayor_edad = 0, menor_edad = 100, cantidad_notas, nota, suma_notas, mayor_nota = 0, menor_nota = 100, cantidad_notas_procesadas = 0, mayor_cantidad_notas = 0, menor_cantidad_notas = 100, cantidad_notas_erroneas = 0;
+    string nombre, tecla, N, S;
+    string estudiante_mayor_nota, estudiante_menor_nota, estudiante_mayor_cantidad_notas, estudiante_menor_cantidad_notas;
+    string estudiante_mayor_edad, estudiante_menor_edad;
+    int dia, mes, ano, dia_actual, mes_actual, ano_actual;
+    int edad, dia_mayor_edad, dia_menor_edad, mes_mayor_edad, mes_menor_edad, cantidad_estudiantes, cantidad_notas;
+    int mayor_edad = 0, menor_edad = 100, cantidad_notas_procesadas = 0, mayor_cantidad_notas = 0, menor_cantidad_notas = 100, cantidad_notas_erroneas = 0;
+    double nota, suma_notas = 0, mayor_nota = 0, menor_nota = 100;
 
     do {
         // Inicializar introduciendo cantidad de estudiantes
@@ -28,7 +31,7 @@ int main() {
         cout << "Año: ";
         cin >> ano_actual;
 
-        // Procesar estudiantes
+        // Procesar estudiantes con sus respectivos datos
 
         for (int i = 0; i < cantidad_estudiantes; i++) {
             cout << "\nIntroduzca el nombre del estudiante: ";
