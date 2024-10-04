@@ -129,17 +129,30 @@ int main() {
                 estudiante_menor_promedio = nombre;
             }
 
-            if (promedioA >= 0 && promedioA < 6) {
+            if (mayor_promedioA >= 0 && mayor_promedioA < 6) {
                 promedioAL = "F";
-            } else if (promedioA >= 6 && promedioA < 7) {
+            } else if (mayor_promedioA >= 6 && mayor_promedioA < 7) {
                 promedioAL = "D";
-            } else if (promedioA >= 7 && promedioA < 8) {
+            } else if (mayor_promedioA >= 7 && mayor_promedioA < 8) {
                 promedioAL = "C";
-            } else if (promedioA >= 8 && promedioA < 9) {
+            } else if (mayor_promedioA >= 8 && mayor_promedioA < 9) {
                 promedioAL = "B";
-            } else if (promedioA >= 9 && promedioA <= 10) {
+            } else if (mayor_promedioA >= 9 && mayor_promedioA <= 10) {
                 promedioAL = "A";
             }
+
+            if (menor_promedioA >= 0 && menor_promedioA < 6) {
+                promedioAL = "F";
+            } else if (menor_promedioA >= 6 && menor_promedioA < 7) {
+                promedioAL = "D";
+            } else if (menor_promedioA >= 7 && menor_promedioA < 8) {
+                promedioAL = "C";
+            } else if (menor_promedioA >= 8 && menor_promedioA < 9) {
+                promedioAL = "B";
+            } else if (menor_promedioA >= 9 && menor_promedioA <= 10) {
+                promedioAL = "A";
+            }
+
         }
 
         // Resultados
