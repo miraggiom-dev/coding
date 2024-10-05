@@ -1,10 +1,8 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-int main()
-{
+int main() {
 
     bool SYS = true;
     string nombre, tecla, N = "N", S = "S", promedioAL;
@@ -15,8 +13,7 @@ int main()
     int mayor_edad = 0, menor_edad = 100, cantidad_notas_procesadas = 0, mayor_cantidad_notas = 0, menor_cantidad_notas = 100, cantidad_notas_erroneas = 0;
     double nota, suma_notas = 0, mayor_nota = 0, menor_nota = 100, mayor_promedioV = -1, menor_promedioV = 21, mayor_promedioA = -1, menor_promedioA = 21;
 
-    do
-    {
+    do {
         // Inicializar introduciendo cantidad de estudiantes
 
         cout << "Introduzca la cantidad de estudiantes: ";
@@ -62,23 +59,19 @@ int main()
                     cout << "Introduzca la nota del estudiante " << nombre << ": ";
                     cin >> nota;
 
-                    if (nota < 0 || nota > 20)
-                    {
+                    if (nota < 0 || nota > 20) {
                         cout << "Nota inválida. Por favor, introduzca una nota entre 0 y 20." << endl;
                         cantidad_notas_erroneas++;
                     }
-                    else
-                    {
+                    else {
                         suma_notas += nota;
                         cantidad_notas_procesadas++;
 
-                        if (nota > mayor_nota)
-                        {
+                        if (nota > mayor_nota) {
                             mayor_nota = nota;
                             estudiante_mayor_nota = nombre;
                         }
-                        if (nota < menor_nota)
-                        {
+                        if (nota < menor_nota) {
                             menor_nota = nota;
                             estudiante_menor_nota = nombre;
                         }
@@ -87,13 +80,11 @@ int main()
                 }
             }
 
-            if (cantidad_notas > mayor_cantidad_notas)
-            {
+            if (cantidad_notas > mayor_cantidad_notas) {
                 mayor_cantidad_notas = cantidad_notas;
                 estudiante_mayor_cantidad_notas = nombre;
             }
-            if (cantidad_notas < menor_cantidad_notas)
-            {
+            if (cantidad_notas < menor_cantidad_notas) {
                 menor_cantidad_notas = cantidad_notas;
                 estudiante_menor_cantidad_notas = nombre;
             }
@@ -101,20 +92,18 @@ int main()
             // Calcular edad
 
             edad = ano_actual - ano;
-            if (mes_actual < mes || (mes_actual == mes && dia_actual < dia))
-            {
+
+            if (mes_actual < mes || (mes_actual == mes && dia_actual < dia)) {
                 edad--;
             }
 
-            if (edad > mayor_edad || (edad == mayor_edad && (mes < mes_mayor_edad || (mes == mes_mayor_edad && dia < dia_mayor_edad))))
-            {
+            if (edad > mayor_edad || (edad == mayor_edad && (mes < mes_mayor_edad || (mes == mes_mayor_edad && dia < dia_mayor_edad)))) {
                 mayor_edad = edad;
                 mes_mayor_edad = mes;
                 dia_mayor_edad = dia;
                 estudiante_mayor_edad = nombre;
             }
-            if (edad < menor_edad || (edad == menor_edad && (mes > mes_menor_edad || (mes == mes_menor_edad && dia > dia_menor_edad))))
-            {
+            if (edad < menor_edad || (edad == menor_edad && (mes > mes_menor_edad || (mes == mes_menor_edad && dia > dia_menor_edad)))) {
                 menor_edad = edad;
                 mes_menor_edad = mes;
                 dia_menor_edad = dia;
@@ -126,46 +115,37 @@ int main()
             double promedioV = suma_notas / cantidad_notas;
             double promedioA = promedioV / 2;
 
-            if (promedioV > mayor_promedioV)
-            {
+            if (promedioV > mayor_promedioV) {
                 mayor_promedioV = promedioV;
                 estudiante_mayor_promedio = nombre;
             }
-            if (promedioV < menor_promedioV)
-            {
+            if (promedioV < menor_promedioV) {
                 menor_promedioV = promedioV;
                 estudiante_menor_promedio = nombre;
             }
 
-            if (promedioA > mayor_promedioA)
-            {
+            if (promedioA > mayor_promedioA) {
                 mayor_promedioA = promedioA;
                 estudiante_mayor_promedio = nombre;
             }
-            if (promedioA < menor_promedioA)
-            {
+            if (promedioA < menor_promedioA) {
                 menor_promedioA = promedioA;
                 estudiante_menor_promedio = nombre;
             }
 
-            if (promedioA >= 0 && promedioA < 6)
-            {
+            if (promedioA >= 0 && promedioA < 6) {
                 promedioAL = "F";
             }
-            else if (promedioA >= 6 && promedioA < 7)
-            {
+            else if (promedioA >= 6 && promedioA < 7) {
                 promedioAL = "D";
             }
-            else if (promedioA >= 7 && promedioA < 8)
-            {
+            else if (promedioA >= 7 && promedioA < 8) {
                 promedioAL = "C";
             }
-            else if (promedioA >= 8 && promedioA < 9)
-            {
+            else if (promedioA >= 8 && promedioA < 9) {
                 promedioAL = "B";
             }
-            else if (promedioA >= 9 && promedioA <= 10)
-            {
+            else if (promedioA >= 9 && promedioA <= 10) {
                 promedioAL = "A";
             }
         }
@@ -186,15 +166,13 @@ int main()
         cout << "La cantidad de estudiantes procesados fue: " << cantidad_estudiantes << "." << endl;
         cout << "La cantidad de notas erróneas fue: " << cantidad_notas_erroneas << "." << endl;
 
-        cout << "Desea continuar? \n No = N, Sí = S. " << endl;
+        cout << "\nDesea continuar? \nNo = N, Sí = S. " << endl;
         cin >> tecla;
 
-        if (tecla == N)
-        {
+        if (tecla == N) {
             SYS = false;
         }
-        else
-        {
+        else {
             SYS = true;
         }
 
@@ -203,5 +181,4 @@ int main()
 
     } while (SYS);
 
-    return 0;
 }
