@@ -41,7 +41,7 @@ int main() {
             cout << "\nINGRESE LA CANTIDAD DE PRODUCTOS A REGISTRAR: ";
             cin >> limite;
 
-            suma = suma + limite;
+            suma += limite;
 
             for(int i = 0; i < limite; i++) {
 
@@ -60,7 +60,7 @@ int main() {
                 cout << "- ¿El producto esta exento de IVA? (Si = 1, No = 0): ";
                 cin >> vector_exento[i];
 
-                bruto = bruto + vector_precio[i];
+                bruto += vector_precio[i];
 
                 if(i == 0) {
                     precio_mayor = vector_precio[i];
