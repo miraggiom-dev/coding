@@ -29,12 +29,6 @@ int main() {
         cout << "\nINGRESE UNA OPCION: " << endl;
         cin >> opcion;
 
-        // Validación de entrada de opción.
-        while (opcion < 1 || opcion > 6) {
-            cout << "\nOpción inválida, por favor ingrese una opción entre 1 y 6: ";
-            cin >> opcion;
-        }
-
         system("clear");
 
         switch(opcion) {
@@ -317,15 +311,12 @@ int main() {
                     }
                 }
 
-                // Mostrar estadísticas de los últimos productos agregados.
-                cout << "\n                ESTADISTICAS DE LA ULTIMA LISTA:" << endl;
+                // Mostrar estadísticas de los productos totales.
+                cout << "\n                     ESTADISTICAS TOTALES:" << endl;
                 cout << "- El producto mas costoso es " << producto_precio_mayor << " con un precio de " << precio_mayor << " dolares ($)." << endl;
                 cout << "- El producto menos costoso es " << producto_precio_menor << " con un precio de " << precio_menor << " dolares ($)." << endl;
                 cout << "- El producto con mayor cantidad es " << producto_cantidad_mayor << " con un total de " << cantidad_mayor << " unidades." << endl;
                 cout << "- El producto con menor cantidad es " << producto_cantidad_menor << " con un total de " << cantidad_menor << " unidades." << endl;
-
-                // Mostrar estadísticas de los productos totales.
-                cout << "\n              ESTADISTICAS TOTALES:" << endl;
                 cout << "- La cantidad total es de " << productos << " productos." << endl;
                 cout << "- Precio bruto total: " << precio_bruto << " dolares ($) y " << precio_bruto_bs << " bolivares (Bs)." << endl;
                 cout << "- Precio neto total: " << precio_neto << " dolares ($) y " << precio_neto_bs << " bolivares (Bs)." << endl;
