@@ -205,6 +205,10 @@ int main() {
                     cout << "- ¿El producto está exento de IVA? (Y/N): ";
                     cin >> vector_exento[u];
                     break;
+
+                    default:
+                    cout << "Error, no existe esa opcion.";
+                    break;
                 }
                 cout << "\n---------------------------------" << endl;
                 cout << "(Para volver presione 1): ";
@@ -385,6 +389,10 @@ int main() {
 
                 system("pause");
                 system("clear");
+
+            default:
+                cout << "Error, no existe esa opcion.";
+            break;
 
         }
 
