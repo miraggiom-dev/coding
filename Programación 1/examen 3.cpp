@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
 
-    // Declaración de variables.
+    // Declaracion de variables.
     string producto_precio_mayor, producto_precio_menor;
     string producto_cantidad_mayor, producto_cantidad_menor, productos_con_exentos;
     string vector_nombre[50], vector_exento[50];
@@ -18,7 +18,7 @@ int main() {
     
     do {
 
-        // Menú principal.
+        // Menu principal.
         cout << "         MENU." << endl;
         cout << "\n1. AGREGAR PRODUCTOS." << endl;
         cout << "2. MODIFICAR PRODUCTOS." << endl;
@@ -26,10 +26,10 @@ int main() {
         cout << "4. ESTADISTICAS." << endl;
         cout << "5. CONFIGURACION." << endl;
         cout << "6. SALIR." << endl;
-        cout << "\nINGRESE UNA OPCION: " << endl;
+        cout << "\nINGRESE UNA OPCION: ";
         cin >> opcion;
 
-        system("clear");
+        system("cls");
 
         switch(opcion) {
 
@@ -37,9 +37,9 @@ int main() {
                 cout << "\nINGRESE LA CANTIDAD DE PRODUCTOS A REGISTRAR: ";
                 cin >> limite;
 
-                // Validación de entrada de límite.
+                // Validacion de entrada de limite.
                 while (limite <= 0) {
-                    cout << "Cantidad inválida, por favor ingrese una cantidad mayor o igual que cero: ";
+                    cout << "Cantidad invalida, por favor ingrese una cantidad mayor o igual que cero: ";
                     cin >> limite;
                 }
 
@@ -53,16 +53,16 @@ int main() {
                     cin >> vector_nombre[i];
 
                     // Cantidad del producto.
-                    cout << "- ¿Cuantos " << vector_nombre[i] << " quiere?: ";
+                    cout << "- Ingrese la cantidad deseada: ";
                     cin >> vector_cantidad[i];
 
-                    // Validación de cantidad.
+                    // Validacion de cantidad.
                     while (vector_cantidad[i] < 0) {
                         cout << "La cantidad es invalida. Por favor, ingrese otra: ";
                         cin >> vector_cantidad[i];
                     }
 
-                    // Crear estadísticas de cantidad.
+                    // Crear estadisticas de cantidad.
                     if (vector_cantidad[i] > cantidad_mayor) {
                         cantidad_mayor = vector_cantidad[i];
                         producto_cantidad_mayor = vector_nombre[i];
@@ -76,13 +76,13 @@ int main() {
                     cout << "- Ingrese el precio del producto: ";
                     cin >> vector_precio[i];
 
-                    // Validación de precio.
+                    // Validacion de precio.
                     while (vector_precio[i] < 0) {
                         cout << "El precio es invalido. Por favor, ingrese otro: ";
                         cin >> vector_precio[i];
                     }
 
-                    // Crear estadísticas de precios.
+                    // Crear estadisticas de precios.
                     if (vector_precio[i] > precio_mayor) {
                         precio_mayor = vector_precio[i];
                         producto_precio_mayor = vector_nombre[i];
@@ -92,13 +92,13 @@ int main() {
                         producto_precio_menor = vector_nombre[i];
                     }
 
-                    // Ingreso de código.
+                    // Ingreso de codigo.
                     bool codigo_repetido;
                     do {
                         cout << "- Ingrese el codigo del producto: ";
                         cin >> codigo;
 
-                        // Verificar si el código ya está en uso.
+                        // Verificar si el codigo ya esta en uso.
                         codigo_repetido = false;
                         for(int j = 0; j < i; j++) {
                             if(vector_codigo[j] == codigo) {
